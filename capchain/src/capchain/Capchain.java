@@ -12,9 +12,8 @@ public class Capchain {
 		Blockchain bc = new Blockchain();
         Block lastBlock = bc.getLatestBlock();
         Block newBlock = new Block();
-        newBlock.setIndex(1);
+        newBlock.setIndex(lastBlock.getIndex() + 1);
         newBlock.setNonce(4);
-        newBlock.setHash(Block.hashBlock(lastBlock.getHash(), newBlock.toString(), 0));
         newBlock.setPreviousBlockHash(lastBlock.getHash());
         newBlock.setTimeStamp(new Date());
         newBlock.setTransactions(null);

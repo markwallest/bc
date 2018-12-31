@@ -10,10 +10,10 @@ public class Blockchain {
 		this.blockChain = new ArrayList<>();
 		Block genesysBlock = new Block();
 		genesysBlock.setIndex(0);
-		genesysBlock.setNonce(4);
+		genesysBlock.setNonce(0);
 		genesysBlock.setPreviousBlockHash(null);
 		genesysBlock.setTimeStamp(new Date());
-		genesysBlock.setHash(Block.hashBlock(null,  genesysBlock.toString(), 4));
+//		genesysBlock.setHash(Block.hashBlock(null,  genesysBlock.toString(), 4));
 		this.blockChain.add(genesysBlock);
 		System.out.println("blockchain : "+ this.blockChain);
 		
